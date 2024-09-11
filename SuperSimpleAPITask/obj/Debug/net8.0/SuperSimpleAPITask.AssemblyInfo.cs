@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperSimpleAPITask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f530cc5abd02016c6d20a20f964b8870dee48bf8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1489e0625c58a533c6f2f8e9c6a7b828063244df")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperSimpleAPITask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperSimpleAPITask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

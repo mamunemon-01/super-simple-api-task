@@ -138,9 +138,10 @@ namespace SuperSimpleAPITask.Controllers{
             return Ok(employeeDtos);
         }
 
-        [HttpGet("Search/deptId/{deptId}")]
-        public async Task<IActionResult> SearchByDeptId(Guid deptId){
-            var results = await _employeeRepository.SearchByDept(deptId);
+        [HttpGet("Search/department/{deptName}")]
+        public async Task<IActionResult> SearchByDeptId(string deptName){
+            var departments = await _departmentRepository.SearchByName(deptName);
+            var results = await _employeeRepository.SearchByDept(departments.Select(d => d.Id).ToList());
 
             List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
 

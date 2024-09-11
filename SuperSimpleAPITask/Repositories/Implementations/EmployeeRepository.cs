@@ -60,10 +60,10 @@ public class EmployeeRepository:IEmployeeRepository{
         }
     }
 
-    public async Task<IEnumerable<Employee>> SearchByDept(Guid id){
+    public async Task<IEnumerable<Employee>> SearchByDept(List<Guid> ids){
         using(var connection = _connectionFactory.CreateConnection()){
-            var query = "SELECT * FROM Employees WHERE DeptId=@Id";
-            return await connection.QueryAsync<Employee>(query, new {Id= id});
+            var query = "SELECT * FROM Employees WHERE DeptId IN @Ids";
+            return await connection.QueryAsync<Employee>(query, new {Ids= ids});
         }
     }
 }

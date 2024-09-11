@@ -10,5 +10,5 @@ public interface IEmployeeRepository{
     Task<int> DeleteAsync(Guid id);
     Task<IEnumerable<Employee>> SearchByName(string name);
     Task<IEnumerable<Employee>> SearchByPhoneNo(string phoneNo);
-    Task<IEnumerable<Employee>> SearchByDept(Guid id);
+    Task<IEnumerable<Employee>> SearchByDept(List<Guid> ids);
 }
