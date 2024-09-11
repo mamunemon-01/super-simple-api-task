@@ -61,5 +61,125 @@
 @section Scripts{
     <script>
         const apiBaseUrl = "http://localhost:5299/api";
+
+        function getAllEmployees(){
+            $ajax({
+                url:`${apiBaseUrl}/Employee/Retrieve`,
+                method: 'GET',
+                success: function(data){
+                    updateEmployeeList(data);
+                },
+                error: function(error){
+                    console.error('Error fetching employees: ', error);
+                }
+            });
+        }
+
+        function addEmployee(employee){
+            $ajax({
+                url: `${apiBaseUrl}/Employee/Create`,
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(employee),
+                success: function(data){
+                    getAllEmployees();
+                    $('#addEmployeeForm')[0]reset();
+                },
+                error: function(error){
+                    console.error("Error adding employee: ", error);
+                }
+            });
+        }
+
+        function updateEmployee(id, employee){
+            $ajax({
+                url: `${apiBaseUrl}/Employee/Update/${id}`,
+                method: 'PUT',
+                connectionType: 'application/json',
+                data: JSON.stringify(employee),
+                success: function(data){
+                    getAllEmployees();
+                },
+                error: function(error){
+                    console.error('Error updating employee: ', error);
+                }
+            });
+        }
+
+        function deleteEmployee(id){
+            $ajax({
+                url: `${apiBaseUrl}/Employee/Delete/${id}`,
+                method: 'DELETE',
+                success: function(data){
+                    getAllEmployees();
+                },
+                error: function(error){
+                    console.error('Error deleting employee: ', error);
+                }
+            });
+        }
+
+        function searchEmployees(){
+            const searchType = $('#searchType').val();
+            const searchTerm = $('#searchTerm').val();
+            let url;
+
+            switch(searchType){
+                case 'name':
+                    url = `${apiBaseUrl}/Employee/Search/name/${searchTerm};`
+                    break;
+                case 'phoneNumber':
+                    url = `${apiBaseUrl}/Employee/Search/phoneNo/${searchTerm}`;
+                    break;
+                case 'department':
+                    url = `${apiBaseUrl}/Employee/Search/department/${searchTerm}`;
+                    break;
+            }
+
+            $ajax({
+                url: url,
+                method: 'GET',
+                success: function(data){
+                    updateEmployeeList(data);
+                },
+                error: function(error){
+                    console.error('Error searching employee: ', error);
+                }
+            });
+        }
+
+        function updateEmployeeList(employees){
+            const employeeList = $('#employeeList');
+            employeeList.empty();
+
+            employees.foreach(employee => {
+                employeeList.append(`
+                    <tr>
+                        <td>${employee.Name}</td>
+                        <td>${employee.PhoneNo}</td>
+                        <td>${employee.DeptName}</td>
+                        <td>
+                            <button onclick="updateEmployee(${employee.Id}, ${JSON.stringify(employee)})" class="btn btn-sm btn-primary">Edit</button>
+                            <button onclick="deleteEmployee(${employee.Id})" class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                `);
+            });
+        }
+
+        $document.ready(function(){
+            getAllEmployees();
+
+
+            $('#addEmployeeForm').submit(function(e){
+                e.preventDefault();
+                const employee = {
+                    name: $('#name').val(),
+                    phoneNo: $('#phoneNo').val(),
+                    deptName: $('#department').val();
+                };
+                addEmployee(employee);
+            });
+        });
     </script>
 }

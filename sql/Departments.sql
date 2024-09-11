@@ -1,0 +1,4 @@
+CREATE TABLE Departments (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    Name VARCHAR(50)
+)
