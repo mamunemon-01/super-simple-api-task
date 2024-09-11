@@ -136,3 +136,4 @@ Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleAPITask\obj\Debug\net8.
 Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleAPITask\obj\Debug\net8.0\SuperSimpleAPITask.pdb
 Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleAPITask\obj\Debug\net8.0\SuperSimpleAPITask.genruntimeconfig.cache
 Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleAPITask\obj\Debug\net8.0\ref\SuperSimpleAPITask.dll
+Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleAPITask\obj\Debug\net8.0\SuperSimpleAPITask.sourcelink.json

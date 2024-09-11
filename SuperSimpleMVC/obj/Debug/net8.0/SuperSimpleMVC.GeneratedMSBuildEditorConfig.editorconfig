@@ -18,30 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,10 +45,6 @@ build_metadata.AdditionalFiles.CssScope =
 [Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/SuperSimpleMVC/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = U3VwZXJTaW1wbGVNVkNcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-3alu229ou0
 
 [Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

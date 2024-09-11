@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Employee List"
+    ViewData["Title"] = "Employee List";
 }
 
 <h2>List of Employees</h2>
@@ -17,7 +17,7 @@
     </tbody>
 </table>
 
-@Script{
+@section Scripts{
     document.getElementById('loadEmployees').addEventListener(click, function () {
         fetch('/api/Employee/Retrieve')
             .then(response => response.json())
