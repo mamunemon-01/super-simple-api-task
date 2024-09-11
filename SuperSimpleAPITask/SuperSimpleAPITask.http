@@ -1,0 +1,6 @@
+@SuperSimpleAPITask_HostAddress = http://localhost:5299
+
+GET {{SuperSimpleAPITask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\models\\viewmodels\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\models\\viewmodels\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateEmployeeDto.cs",
+              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "RelativeDocumentMoniker": "SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "RelativeToolTip": "SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T10:18:04.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "ViewState": "AQIAACsAAAAAwJmZmZnJvzkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T09:32:40.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T12:30:26.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

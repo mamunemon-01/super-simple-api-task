@@ -1,0 +1,7 @@
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.AssemblyInfoInputs.cache
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.AssemblyInfo.cs
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.csproj.CoreCompileInputs.cache
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.RazorAssemblyInfo.cache
+D:\Design\Team_Member\Mamun\Development\DotNet\SuperSimpleAPITask\SuperSimpleMVC\obj\Debug\net8.0\SuperSimpleMVC.RazorAssemblyInfo.cs

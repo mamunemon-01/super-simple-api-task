@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Employee List"
+}
+
+<h2>List of Employees</h2>
+<button id="loadEmployees">Load Employees</button>
+<table id="employeeTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- employee data to be shown here -->
+    </tbody>
+</table>
+
+@Script{
+    document.getElementById('loadEmployees').addEventListener(click, function () {
+        fetch('/api/Employee/Retrieve')
+            .then(response => response.json())
+            .then(data => {
+                let employeeTable = document.getElementById('employeeTable').getElementsByTagName('tbody')[0];
+                employeeTable.innerHtml = "";
+
+                data.foreach(employee => {
+                    let row = employeeTable.insertRow();
+                    row.insertCell(0).textContent = employee.Name;
+                    row.insertCell(1).textContent = employee.Name;
+                    row.insertCell(2).textContent = employee.Name;
+                });
+            })
+            .catch(error => console.error("Error: ", error));
+    });
+}

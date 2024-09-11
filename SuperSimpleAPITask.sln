@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSimpleAPITask", "SuperSimpleAPITask\SuperSimpleAPITask.csproj", "{5B6E57EF-9614-4D3C-9091-29DD8597CB82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSimpleMVC", "SuperSimpleMVC\SuperSimpleMVC.csproj", "{C45C5BE2-A676-48FE-BE79-966478F68A67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B6E57EF-9614-4D3C-9091-29DD8597CB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6E57EF-9614-4D3C-9091-29DD8597CB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6E57EF-9614-4D3C-9091-29DD8597CB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6E57EF-9614-4D3C-9091-29DD8597CB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45C5BE2-A676-48FE-BE79-966478F68A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45C5BE2-A676-48FE-BE79-966478F68A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45C5BE2-A676-48FE-BE79-966478F68A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45C5BE2-A676-48FE-BE79-966478F68A67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B78598A3-C4F7-49BC-9030-69030EB5D1F3}
+	EndGlobalSection
+EndGlobal
