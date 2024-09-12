@@ -2,27 +2,28 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SuperSimpleAPITask.Models;
 using SuperSimpleAPITask.Models.ViewModels;
+using SuperSimpleAPITask.Repositories.Interfaces;
 
 namespace SuperSimpleAPITask.Controllers{
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController:ControllerBase {
-        private readonly IEmployeeRepository _employeeRepository;
-        private readonly IDepartmentRepository _departmentRepository;
+        //private readonly IEmployeeRepository _unitOfWork.Employee;
+        //private readonly IDepartmentRepository _unitOfWork.Department;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, IDepartmentRepository departmentRepository){
-            _employeeRepository = employeeRepository;
-            _departmentRepository = departmentRepository;
+        public EmployeeController(IUnitOfWork unitOfWork){
+            _unitOfWork = unitOfWork;
         }
 
-        [HttpGet("Retrieve")]
-        public async Task<IActionResult> Retrieve(){
-            var employees = await _employeeRepository.GetAllAsync();
+        [HttpGet]
+        public async Task<IActionResult> Get(){
+            var employees = await _unitOfWork.Employee.GetAllAsync();
             
             List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
 
             foreach(Employee employee in employees){
-                Department department = await _departmentRepository.GetByIdAsync(employee.DeptId);
+                Department department = await _unitOfWork.Department.GetByIdAsync(employee.DeptId);
                 employeeDtos.Add(new CreateEmployeeDto{
                     Id = employee.Id,
                     Name = employee.Name,
@@ -34,13 +35,13 @@ namespace SuperSimpleAPITask.Controllers{
             return Ok(employeeDtos);
         }
 
-        [HttpGet("Retrieve/{id}")]
-        public async Task<IActionResult> Retrieve(Guid id){
-            var employee = await _employeeRepository.GetByIdAsync(id);
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(Guid id){
+            var employee = await _unitOfWork.Employee.GetByIdAsync(id);
             if(employee==null){
                 return NotFound();
             }
-            Department department = await _departmentRepository.GetByIdAsync(employee.DeptId);
+            Department department = await _unitOfWork.Department.GetByIdAsync(employee.DeptId);
             CreateEmployeeDto employeeDto = new CreateEmployeeDto{
                 Id = employee.Id,
                 Name = employee.Name,
@@ -50,25 +51,26 @@ namespace SuperSimpleAPITask.Controllers{
             return Ok(employeeDto);
         }
 
-        [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromForm] CreateEmployeeDto employeeDto){
-            var departments = await _departmentRepository.SearchByName(employeeDto.DeptName);
+        [HttpPost]
+        public async Task<IActionResult> Post([FromForm] CreateEmployeeDto employeeDto){
+            var departments = await _unitOfWork.Department.SearchByName(employeeDto.DeptName);
             Employee employee = new Employee{
                 Id = (Guid)((employeeDto.Id.HasValue && employeeDto.Id != Guid.Empty)?employeeDto.Id:Guid.NewGuid()),
                 Name = employeeDto.Name,
                 PhoneNo = employeeDto.PhoneNo,
                 DeptId = departments.ElementAt(0).Id
             };
-            var result = await _employeeRepository.CreateAsync(employee);
-            if(result==0){
-                return BadRequest();
-            }
-            return CreatedAtAction(nameof(Retrieve), new { employee.Id }, employee);
+            await _unitOfWork.Employee.CreateAsync(employee);
+            //if(result==0){
+            //    return BadRequest();
+            //}
+            _unitOfWork.SaveAsync();
+            return CreatedAtAction(nameof(Get), new { employee.Id }, employee);
         }
 
-        [HttpPut("Update/{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromForm] CreateEmployeeDto employeeDto){
-            Employee existingEmployee = await _employeeRepository.GetByIdAsync(id);
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(Guid id, [FromForm] CreateEmployeeDto employeeDto){
+            Employee existingEmployee = await _unitOfWork.Employee.GetByIdAsync(id);
 
             if(existingEmployee == null) return NotFound();
 
@@ -82,7 +84,7 @@ namespace SuperSimpleAPITask.Controllers{
                 existingEmployee.PhoneNo = employeeDto.PhoneNo;
             }
             if(!employeeDto.DeptName.IsNullOrEmpty()){
-                var departments = await _departmentRepository.SearchByName(employeeDto.DeptName);
+                var departments = await _unitOfWork.Department.SearchByName(employeeDto.DeptName);
                 if(departments.Count() > 0){
                     existingEmployee.DeptId = departments.ElementAt(0).Id;
                 }
@@ -91,26 +93,35 @@ namespace SuperSimpleAPITask.Controllers{
                 }
             };
 
-            var result = await _employeeRepository.UpdateAsync(existingEmployee);
-            if(result==0) return NotFound();
+            _unitOfWork.Employee.Update(existingEmployee);
+            //if(result==0) return NotFound();
+            _unitOfWork.SaveAsync();
             return NoContent();
         }
 
-        [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> Delete(Guid id){
-            var result = await _employeeRepository.DeleteAsync(id);
-            if(result==0) return NotFound();
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var employee = await _unitOfWork.Employee.GetByIdAsync(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            _unitOfWork.Employee.Delete(employee);
+            //if(result==0) return NotFound();
+            _unitOfWork.SaveAsync();
             return NoContent();
         }
 
-        [HttpGet("Search/name/{name}")]
+        [HttpGet("search/name/{name}")]
         public async Task<IActionResult> SearchByName(string name){
-            var results = await _employeeRepository.SearchByName(name);
+            var results = await _unitOfWork.Employee.SearchByNameAsync(name);
 
             List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
 
             foreach(Employee result in results){
-                Department department = await _departmentRepository.GetByIdAsync(result.DeptId);
+                Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
                 employeeDtos.Add(new CreateEmployeeDto{
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
@@ -120,14 +131,14 @@ namespace SuperSimpleAPITask.Controllers{
             return Ok(employeeDtos);
         }
 
-        [HttpGet("Search/phoneNo/{phoneNo}")]
+        [HttpGet("search/phoneNo/{phoneNo}")]
         public async Task<IActionResult> SearchByPhoneNo(string phoneNo){
-            var results = await _employeeRepository.SearchByPhoneNo(phoneNo);
+            var results = await _unitOfWork.Employee.SearchByPhoneNoAsync(phoneNo);
 
             List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
 
             foreach(Employee result in results){
-                Department department = await _departmentRepository.GetByIdAsync(result.DeptId);
+                Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
                 employeeDtos.Add(new CreateEmployeeDto{
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
@@ -138,15 +149,15 @@ namespace SuperSimpleAPITask.Controllers{
             return Ok(employeeDtos);
         }
 
-        [HttpGet("Search/department/{deptName}")]
+        [HttpGet("search/department/{deptName}")]
         public async Task<IActionResult> SearchByDeptId(string deptName){
-            var departments = await _departmentRepository.SearchByName(deptName);
-            var results = await _employeeRepository.SearchByDept(departments.Select(d => d.Id).ToList());
+            var departments = await _unitOfWork.Department.SearchByName(deptName);
+            var results = await _unitOfWork.Employee.SearchByDeptAsync(departments.Select(d => d.Id).ToList());
 
             List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
 
             foreach(Employee result in results){
-                Department department = await _departmentRepository.GetByIdAsync(result.DeptId);
+                Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
                 employeeDtos.Add(new CreateEmployeeDto{
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
