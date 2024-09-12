@@ -170,14 +170,14 @@
   {
     "ContainingType": "SuperSimpleAPITask.Controllers.EmployeeController",
     "Method": "SearchByDeptId",
-    "RelativePath": "api/Employee/Search/deptId/{deptId}",
+    "RelativePath": "api/Employee/Search/department/{deptName}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "deptId",
-        "Type": "System.Guid",
+        "Name": "deptName",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

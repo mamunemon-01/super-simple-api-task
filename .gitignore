@@ -1,0 +1,6 @@
+# Ignore the Visual Studio generated files
+.vs/
+
+# Ignore the build outputs
+obj/
+bin/

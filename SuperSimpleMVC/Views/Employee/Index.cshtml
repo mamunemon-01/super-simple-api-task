@@ -63,7 +63,7 @@
         const apiBaseUrl = "http://localhost:5299/api";
 
         function getAllEmployees(){
-            $ajax({
+            $.ajax({
                 url:`${apiBaseUrl}/Employee/Retrieve`,
                 method: 'GET',
                 success: function(data){
@@ -76,14 +76,14 @@
         }
 
         function addEmployee(employee){
-            $ajax({
+            $.ajax({
                 url: `${apiBaseUrl}/Employee/Create`,
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(employee),
                 success: function(data){
                     getAllEmployees();
-                    $('#addEmployeeForm')[0]reset();
+                    $('#addEmployeeForm')[0].reset();
                 },
                 error: function(error){
                     console.error("Error adding employee: ", error);
@@ -92,7 +92,7 @@
         }
 
         function updateEmployee(id, employee){
-            $ajax({
+            $.ajax({
                 url: `${apiBaseUrl}/Employee/Update/${id}`,
                 method: 'PUT',
                 connectionType: 'application/json',
@@ -107,7 +107,7 @@
         }
 
         function deleteEmployee(id){
-            $ajax({
+            $.ajax({
                 url: `${apiBaseUrl}/Employee/Delete/${id}`,
                 method: 'DELETE',
                 success: function(data){
@@ -136,7 +136,7 @@
                     break;
             }
 
-            $ajax({
+            $.ajax({
                 url: url,
                 method: 'GET',
                 success: function(data){
@@ -167,7 +167,7 @@
             });
         }
 
-        $document.ready(function(){
+        $(document).ready(function(){
             getAllEmployees();
 
 
@@ -176,7 +176,7 @@
                 const employee = {
                     name: $('#name').val(),
                     phoneNo: $('#phoneNo').val(),
-                    deptName: $('#department').val();
+                    deptName: $('#department').val()
                 };
                 addEmployee(employee);
             });

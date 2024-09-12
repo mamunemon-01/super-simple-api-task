@@ -2139,19 +2139,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MAMUN\\.nuget\\packages\\": {}
+    "C:\\Users\\Digital Outlet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\SuperSimpleAPITask.csproj",
+      "projectUniqueName": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\SuperSimpleAPITask.csproj",
       "projectName": "SuperSimpleAPITask",
-      "projectPath": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\SuperSimpleAPITask.csproj",
-      "packagesPath": "C:\\Users\\MAMUN\\.nuget\\packages\\",
-      "outputPath": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\obj\\",
+      "projectPath": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\SuperSimpleAPITask.csproj",
+      "packagesPath": "C:\\Users\\Digital Outlet\\.nuget\\packages\\",
+      "outputPath": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MAMUN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Digital Outlet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2159,6 +2159,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2214,7 +2215,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

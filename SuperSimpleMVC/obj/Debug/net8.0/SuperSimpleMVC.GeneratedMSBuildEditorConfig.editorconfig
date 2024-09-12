@@ -9,43 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SuperSimpleMVC
 build_property.RootNamespace = SuperSimpleMVC
-build_property.ProjectDir = Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleMVC\
+build_property.ProjectDir = E:\Mamun\Development\DotNet\super-simple-api-task\SuperSimpleMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = Z:\E_Lab\Dev\GTR\P3\DotNet\SuperSimpleAPITask\SuperSimpleMVC
+build_property.MSBuildProjectDirectory = E:\Mamun\Development\DotNet\super-simple-api-task\SuperSimpleMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Employee/Index.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Home/Index.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Home/Privacy.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Shared/Error.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/_ViewImports.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/_ViewStart.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/E_Lab/Dev/GTR/P3/DotNet/SuperSimpleAPITask/SuperSimpleMVC/Views/Shared/_Layout.cshtml]
+[E:/Mamun/Development/DotNet/super-simple-api-task/SuperSimpleMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-cf95bcne6b

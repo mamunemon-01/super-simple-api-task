@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\",
+  "WorkspaceRootPath": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|e:\\mamun\\development\\dotnet\\super-simple-api-task\\supersimpleapitask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C45C5BE2-A676-48FE-BE79-966478F68A67}|SuperSimpleMVC\\SuperSimpleMVC.csproj|e:\\mamun\\development\\dotnet\\super-simple-api-task\\supersimplemvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C45C5BE2-A676-48FE-BE79-966478F68A67}|SuperSimpleMVC\\SuperSimpleMVC.csproj|solutionrelative:supersimplemvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|e:\\mamun\\development\\dotnet\\super-simple-api-task\\supersimpleapitask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\models\\viewmodels\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|e:\\mamun\\development\\dotnet\\super-simple-api-task\\supersimpleapitask\\models\\viewmodels\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\models\\viewmodels\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|z:\\e_lab\\dev\\gtr\\p3\\dotnet\\supersimpleapitask\\supersimpleapitask\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|e:\\mamun\\development\\dotnet\\super-simple-api-task\\supersimpleapitask\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B6E57EF-9614-4D3C-9091-29DD8597CB82}|SuperSimpleAPITask\\SuperSimpleAPITask.csproj|solutionrelative:supersimpleapitask\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,15 +30,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\appsettings.json",
+              "RelativeDocumentMoniker": "SuperSimpleAPITask\\appsettings.json",
+              "ToolTip": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\appsettings.json",
+              "RelativeToolTip": "SuperSimpleAPITask\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-12T05:10:35.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleMVC\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "SuperSimpleMVC\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleMVC\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "SuperSimpleMVC\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAIwIoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T04:58:11.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CreateEmployeeDto.cs",
-              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "DocumentMoniker": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
               "RelativeDocumentMoniker": "SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
-              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
+              "ToolTip": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
               "RelativeToolTip": "SuperSimpleAPITask\\Models\\ViewModels\\CreateEmployeeDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -38,11 +72,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DepartmentController.cs",
-              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "DocumentMoniker": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
-              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
+              "ToolTip": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
               "RelativeToolTip": "SuperSimpleAPITask\\Controllers\\DepartmentController.cs",
               "ViewState": "AQIAACsAAAAAwJmZmZnJvzkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -50,13 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EmployeeController.cs",
-              "DocumentMoniker": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "DocumentMoniker": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
-              "ToolTip": "Z:\\E_Lab\\Dev\\GTR\\P3\\DotNet\\SuperSimpleAPITask\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
+              "ToolTip": "E:\\Mamun\\Development\\DotNet\\super-simple-api-task\\SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "SuperSimpleAPITask\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T12:30:26.551Z",
               "EditorCaption": ""
