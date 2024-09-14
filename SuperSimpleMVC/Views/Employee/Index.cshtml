@@ -64,7 +64,7 @@
 
         function getAllEmployees(){
             $.ajax({
-                url:`${apiBaseUrl}/Employee/Retrieve`,
+                url:`${apiBaseUrl}/Employee/`,
                 method: 'GET',
                 success: function(data){
                     updateEmployeeList(data);
@@ -77,7 +77,7 @@
 
         function addEmployee(employee){
             $.ajax({
-                url: `${apiBaseUrl}/Employee/Create`,
+                url: `${apiBaseUrl}/Employee/`,
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(employee),
@@ -93,7 +93,7 @@
 
         function updateEmployee(id, employee){
             $.ajax({
-                url: `${apiBaseUrl}/Employee/Update/${id}`,
+                url: `${apiBaseUrl}/Employee/${id}`,
                 method: 'PUT',
                 connectionType: 'application/json',
                 data: JSON.stringify(employee),
@@ -108,7 +108,7 @@
 
         function deleteEmployee(id){
             $.ajax({
-                url: `${apiBaseUrl}/Employee/Delete/${id}`,
+                url: `${apiBaseUrl}/Employee/${id}`,
                 method: 'DELETE',
                 success: function(data){
                     getAllEmployees();

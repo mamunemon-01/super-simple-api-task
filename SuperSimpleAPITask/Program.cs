@@ -11,12 +11,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddSingleton<ApplicationDbContext>();
-//builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-//builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+// Add DB cotext with connection string specified
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnString")));
+
+// Add service associated with the unit-of-work pattern
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Allow any origin, any header and any method
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ApiTaskDataCors",
+    policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -28,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("ApiTaskDataCors");
 
 app.UseAuthorization();
 
