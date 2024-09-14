@@ -52,7 +52,7 @@ namespace SuperSimpleAPITask.Controllers{
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm] CreateEmployeeDto employeeDto){
+        public async Task<IActionResult> Post(CreateEmployeeDto employeeDto){
             var departments = await _unitOfWork.Department.SearchByName(employeeDto.DeptName);
             Employee employee = new Employee{
                 Id = (Guid)((employeeDto.Id.HasValue && employeeDto.Id != Guid.Empty)?employeeDto.Id:Guid.NewGuid()),
@@ -69,7 +69,7 @@ namespace SuperSimpleAPITask.Controllers{
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Guid id, [FromForm] CreateEmployeeDto employeeDto){
+        public async Task<IActionResult> Put(Guid id, CreateEmployeeDto employeeDto){
             Employee existingEmployee = await _unitOfWork.Employee.GetByIdAsync(id);
 
             if(existingEmployee == null) return NotFound();

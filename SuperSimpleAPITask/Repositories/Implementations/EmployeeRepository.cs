@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using SuperSimpleAPITask.Models;
 using SuperSimpleAPITask.Repositories.Implementations;
 using Microsoft.EntityFrameworkCore;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository{
     private readonly ApplicationDbContext _context;
@@ -66,11 +66,12 @@ public class EmployeeRepository : GenericRepository<Employee>, IEmployeeReposito
         }
 
         var sqlParams = deptIds.Select((id, index) => new SqlParameter($"@id{index}", id)).ToArray();
-        var setOfParams = string.Join(",", sqlParams.Select(p => p.ParameterName));
+        //var setOfParams = string.Join(",", sqlParams.Select(p => p.ParameterName));
+        var placeholders = string.Join(",", Enumerable.Range(0, deptIds.Count).Select(i => $"@id{i}"));
 
-        string query = $"SELECT e.* FROM Employees WHERE DeptId IN ({setOfParams})";
+        string query = $"SELECT * FROM Employees WHERE DeptId IN ({placeholders})";
         return await _context.Employees
-            .FromSqlRaw(query)
+            .FromSqlRaw(query, sqlParams)
             .ToListAsync();
     }
 }
