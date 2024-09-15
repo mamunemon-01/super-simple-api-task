@@ -1,4 +1,4 @@
-﻿using SuperSimpleMVC.Models;
+﻿using SuperSimpleMVC.Models.ViewModels;
 
 namespace SuperSimpleMVC
 {
@@ -14,25 +14,25 @@ namespace SuperSimpleMVC
             _httpClient.BaseAddress = new Uri(_configuration["ApiSettings:BaseApiUrl"]);
         }
 
-        public async Task<IEnumerable<Employee>> GetAllEmployeesAsync()
+        public async Task<IEnumerable<ReadEmployeeDto>> GetAllEmployeesAsync()
         {
             var response = await _httpClient.GetAsync("Employee");
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<IEnumerable<Employee>>();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<ReadEmployeeDto>>();
         }
 
-        public async Task<Employee> AddEmployeeAsync(Employee employee)
+        public async Task<CreateEmployeeDto> AddEmployeeAsync(CreateEmployeeDto employee)
         {
             var response = await _httpClient.PostAsJsonAsync("Employee", employee);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<Employee>();
+            return await response.Content.ReadFromJsonAsync<CreateEmployeeDto>();
         }
 
-        public async Task<Employee> UpdateEmployeeAsync(string id, Employee employee)
+        public async Task<CreateEmployeeDto> UpdateEmployeeAsync(string id, CreateEmployeeDto employee)
         {
             var response = await _httpClient.PutAsJsonAsync($"Employee/{id}", employee);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<Employee>();
+            return await response.Content.ReadFromJsonAsync<CreateEmployeeDto>();
         }
 
         public async Task DeleteEmployeeAsync(string id)

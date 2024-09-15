@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SuperSimpleMVC;
 using SuperSimpleMVC.Models;
+using SuperSimpleMVC.Models.ViewModels;
 
 public class EmployeeController : Controller {
     private readonly ApiClient _apiClient;
@@ -21,13 +22,13 @@ public class EmployeeController : Controller {
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] Employee employee) {
+    public async Task<IActionResult> Post([FromBody] CreateEmployeeDto employee) {
         var newEmployee = await _apiClient.AddEmployeeAsync(employee);
         return Json(newEmployee);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(string id, [FromBody] Employee employee)
+    public async Task<IActionResult> Put(string id, [FromBody] CreateEmployeeDto employee)
     {
         var updatedEmployee = await _apiClient.UpdateEmployeeAsync(id, employee);
         return Json(updatedEmployee);
@@ -38,5 +39,26 @@ public class EmployeeController : Controller {
     {
         await _apiClient.DeleteEmployeeAsync(id);
         return Ok();
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> SearchByNameAsync(string name)
+    {
+        var employees = await _apiClient.GetAllEmployeesAsync();
+        return Json(employees);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> SearchByPhoneNoAsync(string phoneNo)
+    {
+        var employees = await _apiClient.GetAllEmployeesAsync();
+        return Json(employees);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> SearchByDeptNameAsync(string deptName)
+    {
+        var employees = await _apiClient.GetAllEmployeesAsync();
+        return Json(employees);
     }
 }
