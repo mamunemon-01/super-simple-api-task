@@ -27,14 +27,14 @@ public class EmployeeController : Controller {
         return Json(newEmployee);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut]
     public async Task<IActionResult> Put(string id, [FromBody] CreateEmployeeDto employee)
     {
         var updatedEmployee = await _apiClient.UpdateEmployeeAsync(id, employee);
         return Json(updatedEmployee);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete]
     public async Task<IActionResult> Delete(string id)
     {
         await _apiClient.DeleteEmployeeAsync(id);
@@ -42,23 +42,23 @@ public class EmployeeController : Controller {
     }
 
     [HttpGet]
-    public async Task<IActionResult> SearchByNameAsync(string name)
+    public async Task<IActionResult> SearchByName(string name)
     {
-        var employees = await _apiClient.GetAllEmployeesAsync();
+        var employees = await _apiClient.SearchByNameAsync(name);
         return Json(employees);
     }
 
     [HttpGet]
-    public async Task<IActionResult> SearchByPhoneNoAsync(string phoneNo)
+    public async Task<IActionResult> SearchByPhoneNo(string phoneNo)
     {
-        var employees = await _apiClient.GetAllEmployeesAsync();
+        var employees = await _apiClient.SearchByPhoneNoAsync(phoneNo);
         return Json(employees);
     }
 
     [HttpGet]
-    public async Task<IActionResult> SearchByDeptNameAsync(string deptName)
+    public async Task<IActionResult> SearchByDeptName(string deptName)
     {
-        var employees = await _apiClient.GetAllEmployeesAsync();
+        var employees = await _apiClient.SearchByDeptNameAsync(deptName);
         return Json(employees);
     }
 }

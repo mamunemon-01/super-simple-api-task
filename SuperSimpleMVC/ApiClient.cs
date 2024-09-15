@@ -40,5 +40,26 @@ namespace SuperSimpleMVC
             var response = await _httpClient.DeleteAsync($"Employee/{id}");
             response.EnsureSuccessStatusCode();
         }
+
+        public async Task<IEnumerable<ReadEmployeeDto>> SearchByNameAsync(string name)
+        {
+            var response = await _httpClient.GetAsync($"Employee/search/name/{name}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<ReadEmployeeDto>>();
+        }
+
+        public async Task<IEnumerable<ReadEmployeeDto>> SearchByPhoneNoAsync(string phoneNo)
+        {
+            var response = await _httpClient.GetAsync($"Employee/search/phoneNo/{phoneNo}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<ReadEmployeeDto>>();
+        }
+
+        public async Task<IEnumerable<ReadEmployeeDto>> SearchByDeptNameAsync(string deptName)
+        {
+            var response = await _httpClient.GetAsync($"Employee/search/department/{deptName}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<ReadEmployeeDto>>();
+        }
     }
 }
