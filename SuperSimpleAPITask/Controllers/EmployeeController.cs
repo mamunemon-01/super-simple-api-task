@@ -20,11 +20,11 @@ namespace SuperSimpleAPITask.Controllers{
         public async Task<IActionResult> Get(){
             var employees = await _unitOfWork.Employee.GetAllAsync();
             
-            List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
+            List<ReadEmployeeDto> employeeDtos = new List<ReadEmployeeDto>();
 
             foreach(Employee employee in employees){
                 Department department = await _unitOfWork.Department.GetByIdAsync(employee.DeptId);
-                employeeDtos.Add(new CreateEmployeeDto{
+                employeeDtos.Add(new ReadEmployeeDto{
                     Id = employee.Id,
                     Name = employee.Name,
                     PhoneNo = employee.PhoneNo,
@@ -42,7 +42,7 @@ namespace SuperSimpleAPITask.Controllers{
                 return NotFound();
             }
             Department department = await _unitOfWork.Department.GetByIdAsync(employee.DeptId);
-            CreateEmployeeDto employeeDto = new CreateEmployeeDto{
+            ReadEmployeeDto employeeDto = new ReadEmployeeDto{
                 Id = employee.Id,
                 Name = employee.Name,
                 PhoneNo = employee.PhoneNo,
@@ -55,7 +55,7 @@ namespace SuperSimpleAPITask.Controllers{
         public async Task<IActionResult> Post(CreateEmployeeDto employeeDto){
             var departments = await _unitOfWork.Department.SearchByName(employeeDto.DeptName);
             Employee employee = new Employee{
-                Id = (Guid)((employeeDto.Id.HasValue && employeeDto.Id != Guid.Empty)?employeeDto.Id:Guid.NewGuid()),
+                Id = Guid.NewGuid(),
                 Name = employeeDto.Name,
                 PhoneNo = employeeDto.PhoneNo,
                 DeptId = departments.ElementAt(0).Id
@@ -74,9 +74,9 @@ namespace SuperSimpleAPITask.Controllers{
 
             if(existingEmployee == null) return NotFound();
 
-            if(employeeDto.Id.HasValue && employeeDto.Id != Guid.Empty){
-                existingEmployee.Id = (Guid) employeeDto.Id;
-            }
+            //if(employeeDto.Id.HasValue && employeeDto.Id != Guid.Empty){
+            //    existingEmployee.Id = (Guid) employeeDto.Id;
+            //}
             if(!employeeDto.Name.IsNullOrEmpty()){
                 existingEmployee.Name = employeeDto.Name;
             }
@@ -118,11 +118,12 @@ namespace SuperSimpleAPITask.Controllers{
         public async Task<IActionResult> SearchByName(string name){
             var results = await _unitOfWork.Employee.SearchByNameAsync(name);
 
-            List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
+            List<ReadEmployeeDto> employeeDtos = new List<ReadEmployeeDto>();
 
             foreach(Employee result in results){
                 Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
-                employeeDtos.Add(new CreateEmployeeDto{
+                employeeDtos.Add(new ReadEmployeeDto{
+                    Id = result.Id,
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
                     DeptName = department.Name
@@ -135,11 +136,12 @@ namespace SuperSimpleAPITask.Controllers{
         public async Task<IActionResult> SearchByPhoneNo(string phoneNo){
             var results = await _unitOfWork.Employee.SearchByPhoneNoAsync(phoneNo);
 
-            List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
+            List<ReadEmployeeDto> employeeDtos = new List<ReadEmployeeDto>();
 
             foreach(Employee result in results){
                 Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
-                employeeDtos.Add(new CreateEmployeeDto{
+                employeeDtos.Add(new ReadEmployeeDto{
+                    Id = result.Id,
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
                     DeptName = department.Name
@@ -154,11 +156,12 @@ namespace SuperSimpleAPITask.Controllers{
             var departments = await _unitOfWork.Department.SearchByName(deptName);
             var results = await _unitOfWork.Employee.SearchByDeptAsync(departments.Select(d => d.Id).ToList());
 
-            List<CreateEmployeeDto> employeeDtos = new List<CreateEmployeeDto>();
+            List<ReadEmployeeDto> employeeDtos = new List<ReadEmployeeDto>();
 
             foreach(Employee result in results){
                 Department department = await _unitOfWork.Department.GetByIdAsync(result.DeptId);
-                employeeDtos.Add(new CreateEmployeeDto{
+                employeeDtos.Add(new ReadEmployeeDto{
+                    Id = result.Id,
                     Name = result.Name,
                     PhoneNo = result.PhoneNo,
                     DeptName = department.Name

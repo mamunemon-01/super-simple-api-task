@@ -198,7 +198,7 @@
             employeeList.empty();
 
             employees.forEach(employee => {
-                //const encodedEmployeeJson = encodeURIComponent(JSON.stringify(employee));
+                console.log(employee);
                 employeeList.append(`
                     <tr id="row-${employee.id}">
                         <td><span class="editable" data-field="name">${employee.name}</span></td>
