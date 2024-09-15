@@ -27,7 +27,7 @@ public class EmployeeController : Controller {
         return Json(newEmployee);
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public async Task<IActionResult> Put(string id, [FromBody] CreateEmployeeDto employee)
     {
         var updatedEmployee = await _apiClient.UpdateEmployeeAsync(id, employee);

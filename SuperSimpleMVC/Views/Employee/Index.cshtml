@@ -156,21 +156,21 @@
             row.find('.edit-btn').text('Edit').removeClass('btn-success').addClass('btn-primary');
         }
 
-        function updateEmployee(employee) {
+        function updateEmployee(id, employee) {
             //const employeeJson = decodeURIComponent(encodedEmployeeJson);
             //const employee = JSON.parse(employeeJson);
-            const employeeStringified = JSON.stringify(employee);
+            //const employeeStringified = JSON.stringify(employee);
             $.ajax({
-                url: `/Employee/Put/`,
+                url: `/Employee/Put/${id}`,
                 method: 'PUT',
-                connectionType: 'application/json',
-                data: { id: employee.id, employee: employeeStringified },
+                contentType: 'application/json',
+                data: JSON.stringify(employee),
                 success: function (data) {
                     updateEmployeeRow(employee);
                 },
                 error: function (error) {
                     console.error('Error updating employee: ', error);
-                    revertChanges(employee.id);
+                    revertChanges(id);
                 }
             });
         }
@@ -189,12 +189,11 @@
                 editBtn.text('Update').removeClass('btn-primary').addClass('btn-success');
             } else{
                 const updatedEmployee = {
-                    id: id,
                     name: row.find(`input[data-field="name"]`).val(),
                     phoneNo: row.find(`input[data-field="phoneNo"]`).val(),
                     deptName: row.find(`input[data-field="deptName"]`).val()
                 };
-                updateEmployee(updatedEmployee);
+                updateEmployee(id, updatedEmployee);
             }
         }
 
